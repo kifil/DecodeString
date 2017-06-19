@@ -23,8 +23,15 @@ public class Solution {
 			results.add(stringToChar(inputString))
 			return results;
 		}
-		else if inputString.length() == 2 && isValid2charString()){
-			results.add(stringToChar(inputString))
+		else if inputString.length() == 2){
+			if (isValid2charString()){
+				results.add(stringToChar(inputString));
+			}
+			results.add(stringToChar(inputString.charAt(0)));
+			results.add(stringToChar(inputString.charAt(1)));
+			memo.add(inputString,results);
+			return results;
+			
 		}
 	
 		//need ot sonme bound checking
